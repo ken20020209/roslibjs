@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var ROSLIB = require('../..');
+import { expect } from chai;
+import ROSLIB from '../..';
 
 describe('TF2 Republisher Example', function() {
     it('tf republisher', function(done) {

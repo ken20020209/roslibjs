@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var ROSLIB = require('../..');
+import { expect } from chai;
+import ROSLIB from '../..';
 
 var expectedTopics = [
     // '/turtle1/cmd_vel', '/turtle1/color_sensor', '/turtle1/pose',

@@ -4,20 +4,20 @@
  * @author Russell Toris - rctoris@wpi.edu
  */
 
-var Pose = require('../math/Pose');
-var Vector3 = require('../math/Vector3');
-var Quaternion = require('../math/Quaternion');
+import Pose from '../math/Pose';
+import Vector3 from '../math/Vector3';
+import Quaternion from '../math/Quaternion';
 
-var UrdfCylinder = require('./UrdfCylinder');
-var UrdfBox = require('./UrdfBox');
-var UrdfMaterial = require('./UrdfMaterial');
-var UrdfMesh = require('./UrdfMesh');
-var UrdfSphere = require('./UrdfSphere');
+import UrdfCylinder from './UrdfCylinder';
+import UrdfBox from './UrdfBox';
+import UrdfMaterial from './UrdfMaterial';
+import UrdfMesh from './UrdfMesh';
+import UrdfSphere from './UrdfSphere';
 
 /**
  * A Visual element in a URDF.
  */
-class UrdfVisual {
+export default class UrdfVisual {
   /**
    * @param {Object} options
    * @param {Element} options.xml - The XML element to parse.
@@ -136,5 +136,3 @@ class UrdfVisual {
     }
   }
 }
-
-module.exports = UrdfVisual;

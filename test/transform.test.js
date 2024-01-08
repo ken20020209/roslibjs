@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var ROSLIB = require('..');
+import { expect } from chai;
+import ROSLIB from '..';
 
 describe('Transform', function() {
 

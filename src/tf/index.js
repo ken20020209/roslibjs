@@ -1,3 +1,1 @@
-module.exports = {
-  TFClient: require('./TFClient')
-};
+export * from './TFClient';

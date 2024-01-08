@@ -3,19 +3,19 @@
  * @author Brandon Alexander - baalexander@gmail.com
  */
 
-var WebSocket = require('ws');
-var socketAdapter = require('./SocketAdapter.js');
+import socketAdapter from './SocketAdapter.js';
 
-var Service = require('./Service');
-var ServiceRequest = require('./ServiceRequest');
-var ServiceResponse = require('./ServiceResponse');
+import Service from './Service';
+import ServiceRequest from './ServiceRequest';
+import ServiceResponse from './ServiceResponse';
 
-var assign = require('object-assign');
-const Topic = require('./Topic');
-const Param = require('./Param');
-const { TFClient } = require('../tf');
-const { ActionClient, SimpleActionServer } = require('../actionlib');
-var EventEmitter = require('eventemitter3').EventEmitter;
+import assign from 'object-assign';
+import Topic from './Topic';
+import Param from './Param';
+import TFClient from '../tf/TFClient';
+import ActionClient from '../actionlib/ActionClient';
+import SimpleActionServer from '../actionlib/SimpleActionServer';
+import { EventEmitter } from 'eventemitter3';
 
 /**
  * Manages connection to the server and all interactions with ROS.
@@ -27,7 +27,7 @@ var EventEmitter = require('eventemitter3').EventEmitter;
  *  * &#60;topicName&#62; - A message came from rosbridge with the given topic name.
  *  * &#60;serviceID&#62; - A service response came from rosbridge with the given ID.
  */
-class Ros extends EventEmitter {
+export default class Ros extends EventEmitter {
   /**
    * @param {Object} [options]
    * @param {string} [options.url] - The WebSocket URL for rosbridge. Can be specified later with `connect`.
@@ -812,5 +812,3 @@ class Ros extends EventEmitter {
     return new SimpleActionServer({ ros: this, ...options });
   }
 }
-
-module.exports = Ros;

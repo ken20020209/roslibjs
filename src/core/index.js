@@ -1,10 +1,8 @@
-module.exports = {
-  Ros: require('./Ros'),
-  Topic: require('./Topic'),
-  Message: require('./Message'),
-  Param: require('./Param'),
-  Service: require('./Service'),
-  ServiceRequest: require('./ServiceRequest'),
-  ServiceResponse: require('./ServiceResponse'),
-  Action: require('./Action'),
-};
+export {default as Ros} from './Ros';
+export {default as Topic} from './Topic';
+export {default as Message} from './Message';
+export {default as Param} from './Param';
+export {default as Service} from './Service';
+export {default as ServiceRequest} from './ServiceRequest';
+export {default as ServiceResponse} from './ServiceResponse';
+export {default as Action} from './Action';

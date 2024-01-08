@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var ROSLIB = require('../..');
+import { expect } from chai;
+import ROSLIB from '../..';
 
 var ros = new ROSLIB.Ros({
     url: 'ws://localhost:9090'
