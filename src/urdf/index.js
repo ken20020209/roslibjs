@@ -1,11 +1,11 @@
-export { default as UrdfBox } from './UrdfBox';
-export { default as UrdfColor } from './UrdfColor';
-export { default as UrdfCylinder } from './UrdfCylinder';
-export { default as UrdfLink } from './UrdfLink';
-export { default as UrdfMaterial } from './UrdfMaterial';
-export { default as UrdfMesh } from './UrdfMesh';
-export { default as UrdfModel } from './UrdfModel';
-export { default as UrdfSphere } from './UrdfSphere';
-export { default as UrdfVisual } from './UrdfVisual';
+export { default as UrdfBox } from './UrdfBox.js';
+export { default as UrdfColor } from './UrdfColor.js';
+export { default as UrdfCylinder } from './UrdfCylinder.js';
+export { default as UrdfLink } from './UrdfLink.js';
+export { default as UrdfMaterial } from './UrdfMaterial.js';
+export { default as UrdfMesh } from './UrdfMesh.js';
+export { default as UrdfModel } from './UrdfModel.js';
+export { default as UrdfSphere } from './UrdfSphere.js';
+export { default as UrdfVisual } from './UrdfVisual.js';
 
-export * from './UrdfTypes';
+export * from './UrdfTypes.js';

@@ -1,1 +1,1 @@
-export * from './TFClient';
+export * from './TFClient.js';

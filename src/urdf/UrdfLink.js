@@ -4,7 +4,7 @@
  * @author Russell Toris - rctoris@wpi.edu
  */
 
-import UrdfVisual from './UrdfVisual';
+import UrdfVisual from './UrdfVisual.js';
 
 /**
  * A Link element in a URDF.

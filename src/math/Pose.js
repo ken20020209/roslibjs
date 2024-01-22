@@ -3,9 +3,9 @@
  * @author David Gossow - dgossow@willowgarage.com
  */
 
-import Vector3 from './Vector3';
-import Quaternion from './Quaternion';
-import Transform from './Transform';
+import Vector3 from './Vector3.js';
+import Quaternion from './Quaternion.js';
+import Transform from './Transform.js';
 
 /**
  * A Pose in 3D space. Values are copied into this object.

@@ -4,8 +4,8 @@
  * @author Russell Toris - rctoris@wpi.edu
  */
 
-import Topic from '../core/Topic';
-import Ros from '../core/Ros';
+import Topic from '../core/Topic.js';
+import Ros from '../core/Ros.js';
 import { EventEmitter } from 'eventemitter3';
 
 /**

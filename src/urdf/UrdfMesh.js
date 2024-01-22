@@ -4,8 +4,8 @@
  * @author Russell Toris - rctoris@wpi.edu
  */
 
-import Vector3 from '../math/Vector3';
-import * as UrdfTypes from './UrdfTypes';
+import Vector3 from '../math/Vector3.js';
+import * as UrdfTypes from './UrdfTypes.js';
 
 /**
  * A Mesh element in a URDF.

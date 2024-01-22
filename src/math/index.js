@@ -1,4 +1,4 @@
-export { default as Pose } from './Pose';
-export { default as Quaternion } from './Quaternion';
-export { default as Transform } from './Transform';
-export { default as Vector3 } from './Vector3';
+export { default as Pose } from './Pose.js';
+export { default as Quaternion } from './Quaternion.js';
+export { default as Transform } from './Transform.js';
+export { default as Vector3 } from './Vector3.js';

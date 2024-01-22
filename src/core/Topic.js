@@ -4,8 +4,8 @@
  */
 
 import { EventEmitter } from 'eventemitter3';
-import Message from './Message';
-import Ros from './Ros';
+import Message from './Message.js';
+import Ros from './Ros.js';
 
 /**
  * Publish and/or subscribe to a topic in ROS.

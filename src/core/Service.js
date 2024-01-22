@@ -3,9 +3,9 @@
  * @author Brandon Alexander - baalexander@gmail.com
  */
 
-import ServiceResponse from './ServiceResponse';
-import ServiceRequest from './ServiceRequest';
-import Ros from './Ros';
+import ServiceResponse from './ServiceResponse.js';
+import ServiceRequest from './ServiceRequest.js';
+import Ros from './Ros.js';
 import { EventEmitter } from 'eventemitter3';
 
 /**

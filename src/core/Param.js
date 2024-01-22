@@ -3,9 +3,9 @@
  * @author Brandon Alexander - baalexander@gmail.com
  */
 
-import Service from './Service';
-import ServiceRequest from './ServiceRequest';
-import Ros from '../core/Ros';
+import Service from './Service.js';
+import ServiceRequest from './ServiceRequest.js';
+import Ros from '../core/Ros.js';
 
 /**
  * A ROS parameter.

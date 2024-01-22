@@ -4,7 +4,7 @@
  * @author Russell Toris - rctoris@wpi.edu
  */
 
-import UrdfColor from './UrdfColor';
+import UrdfColor from './UrdfColor.js';
 
 /**
  * A Material element in a URDF.

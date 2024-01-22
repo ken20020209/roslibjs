@@ -5,16 +5,16 @@
 
 import socketAdapter from './SocketAdapter.js';
 
-import Service from './Service';
-import ServiceRequest from './ServiceRequest';
-import ServiceResponse from './ServiceResponse';
+import Service from './Service.js';
+import ServiceRequest from './ServiceRequest.js';
+import ServiceResponse from './ServiceResponse.js';
 
 import assign from 'object-assign';
-import Topic from './Topic';
-import Param from './Param';
-import TFClient from '../tf/TFClient';
-import ActionClient from '../actionlib/ActionClient';
-import SimpleActionServer from '../actionlib/SimpleActionServer';
+import Topic from './Topic.js';
+import Param from './Param.js';
+import TFClient from '../tf/TFClient.js';
+import ActionClient from '../actionlib/ActionClient.js';
+import SimpleActionServer from '../actionlib/SimpleActionServer.js';
 import { EventEmitter } from 'eventemitter3';
 
 /**

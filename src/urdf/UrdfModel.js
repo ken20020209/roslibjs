@@ -4,9 +4,9 @@
  * @author Russell Toris - rctoris@wpi.edu
  */
 
-import UrdfMaterial from './UrdfMaterial';
-import UrdfLink from './UrdfLink';
-import UrdfJoint from './UrdfJoint';
+import UrdfMaterial from './UrdfMaterial.js';
+import UrdfLink from './UrdfLink.js';
+import UrdfJoint from './UrdfJoint.js';
 import { DOMParser } from "@xmldom/xmldom";
 
 // See https://developer.mozilla.org/docs/XPathResult#Constants

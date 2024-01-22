@@ -3,7 +3,7 @@
  * @author David Gossow - dgossow@willowgarage.com
  */
 
-import Quaternion from './Quaternion';
+import Quaternion from './Quaternion.js';
 
 /**
  * A 3D vector.

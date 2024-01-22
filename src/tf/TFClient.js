@@ -3,16 +3,16 @@
  * @author David Gossow - dgossow@willowgarage.com
  */
 
-import ActionClient from '../actionlib/ActionClient';
-import Goal from '../actionlib/Goal';
+import ActionClient from '../actionlib/ActionClient.js';
+import Goal from '../actionlib/Goal.js';
 
 import Service from '../core/Service.js';
 import ServiceRequest from '../core/ServiceRequest.js';
 import Topic from '../core/Topic.js';
 
-import Transform from '../math/Transform';
+import Transform from '../math/Transform.js';
 
-import Ros from '../core/Ros';
+import Ros from '../core/Ros.js';
 import { EventEmitter } from 'eventemitter3';
 
 /**

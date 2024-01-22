@@ -3,9 +3,9 @@
  * @author Laura Lindzey - lindzey@gmail.com
  */
 
-import Topic from '../core/Topic';
-import Message from '../core/Message';
-import Ros from '../core/Ros';
+import Topic from '../core/Topic.js';
+import Message from '../core/Message.js';
+import Ros from '../core/Ros.js';
 import { EventEmitter } from 'eventemitter3';
 
 /**

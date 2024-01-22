@@ -4,8 +4,8 @@
  */
 
 import { EventEmitter } from 'eventemitter3';
-import Message from '../core/Message';
-import ActionClient from './ActionClient';
+import Message from '../core/Message.js';
+import ActionClient from './ActionClient.js';
 
 /**
  * An actionlib goal that is associated with an action server.

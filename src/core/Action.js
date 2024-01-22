@@ -4,7 +4,7 @@
  */
 
 import { EventEmitter } from 'eventemitter3';
-import Ros from '../core/Ros';
+import Ros from '../core/Ros.js';
 
 /**
  * A ROS 2 action client.

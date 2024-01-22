@@ -8,9 +8,9 @@
  */
 'use strict';
 
-import decompressPng from '../util/decompressPng';
+import decompressPng from '../util/decompressPng.js';
 import CBOR from 'cbor-js';
-import typedArrayTagger from '../util/cborTypedArrayTags';
+import typedArrayTagger from '../util/cborTypedArrayTags.js';
 var BSON = null;
 // @ts-expect-error -- Workarounds for not including BSON in bundle. need to revisit
 if (typeof bson !== 'undefined') {

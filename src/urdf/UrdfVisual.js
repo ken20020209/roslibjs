@@ -4,15 +4,15 @@
  * @author Russell Toris - rctoris@wpi.edu
  */
 
-import Pose from '../math/Pose';
-import Vector3 from '../math/Vector3';
-import Quaternion from '../math/Quaternion';
+import Pose from '../math/Pose.js';
+import Vector3 from '../math/Vector3.js';
+import Quaternion from '../math/Quaternion.js';
 
-import UrdfCylinder from './UrdfCylinder';
-import UrdfBox from './UrdfBox';
-import UrdfMaterial from './UrdfMaterial';
-import UrdfMesh from './UrdfMesh';
-import UrdfSphere from './UrdfSphere';
+import UrdfCylinder from './UrdfCylinder.js';
+import UrdfBox from './UrdfBox.js';
+import UrdfMaterial from './UrdfMaterial.js';
+import UrdfMesh from './UrdfMesh.js';
+import UrdfSphere from './UrdfSphere.js';
 
 /**
  * A Visual element in a URDF.

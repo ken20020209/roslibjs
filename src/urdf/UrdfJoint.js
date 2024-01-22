@@ -3,9 +3,9 @@
  * @author David V. Lu!! - davidvlu@gmail.com
  */
 
-import Pose from '../math/Pose';
-import Vector3 from '../math/Vector3';
-import Quaternion from '../math/Quaternion';
+import Pose from '../math/Pose.js';
+import Vector3 from '../math/Vector3.js';
+import Quaternion from '../math/Quaternion.js';
 
 /**
  * A Joint element in a URDF.

@@ -4,7 +4,7 @@
  * @author Russell Toris - rctoris@wpi.edu
  */
 
-import * as UrdfTypes from './UrdfTypes';
+import * as UrdfTypes from './UrdfTypes.js';
 
 /**
  * A Sphere element in a URDF.
