@@ -7,7 +7,7 @@
 import UrdfMaterial from './UrdfMaterial.js';
 import UrdfLink from './UrdfLink.js';
 import UrdfJoint from './UrdfJoint.js';
-import { DOMParser } from "@xmldom/xmldom";
+import { DOMParser } from '@xmldom/xmldom';
 
 // See https://developer.mozilla.org/docs/XPathResult#Constants
 var XPATH_FIRST_ORDERED_NODE_TYPE = 9;
