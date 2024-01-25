@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import ROSLIB from '../..';
+import * as ROSLIB from '../../src/RosLib.js';
 
 var ros = new ROSLIB.Ros({
     url: 'ws://localhost:9090'

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import ROSLIB from '../..';
+import * as ROSLIB from '../../src/RosLib.js';
 
 describe('Fibonacci Example', function() {
     it('Fibonacci', function(done) {

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import ROSLIB from '..';
+import * as ROSLIB from '../src/RosLib.js';
 
 function clone(x) {
     var y = {};

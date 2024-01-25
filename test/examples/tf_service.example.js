@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import ROSLIB from '../..';
+import * as ROSLIB from '../../src/RosLib.js';
 
 describe('TF2 Republisher Service Example', function() {
     it('tf republisher', function(done) {

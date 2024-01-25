@@ -25,7 +25,6 @@
     "grunt-eslint": "^24.3.0",
     "grunt-jsdoc": "^2.1.0",
     "grunt-karma": "^4.0.0",
-    "grunt-mocha-test": "^0.13.0",
     "grunt-shell": "^4.0.0",
     "karma": "^6.3.0",
     "karma-chai": "^0.1.0",
@@ -58,9 +57,11 @@
   "scripts": {
     "build": "grunt build",
     "doc": "grunt doc",
-    "test": "grunt test",
-    "test-examples": "grunt test-examples",
-    "test-tcp": "grunt test-tcp",
+    "lint": "eslint .",
+    "test": "npm run lint && npm run test-examples && npm run test-tcp && npm run test-misc",
+    "test-examples": "mocha ./test/examples/*.js",
+    "test-tcp": "mocha ./test/tcp/*.js",
+    "test-misc": "mocha ./test/*.test.js",
     "publish": "npm run build && npm run test"
   },
   "repository": {

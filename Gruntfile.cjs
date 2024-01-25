@@ -13,9 +13,6 @@ module.exports = function(grunt) {
     shell: {
       ts: {
         command: 'tsc -p .'
-      },
-      eslint: {
-        command: 'eslint .'
       }
     },
     browserify: {
@@ -43,22 +40,6 @@ module.exports = function(grunt) {
       },
       examples: {
         configFile: './test/examples/karma.conf.js'
-      }
-    },
-    mochaTest: {
-      options: {
-        reporter: 'spec',
-        timeout: 5000,
-        require: 'ts-node/register'
-      },
-      test: {
-        src: ['./test/*.test.js']
-      },
-      examples: {
-        src: ['./test/examples/*.js']
-      },
-      tcp: {
-        src: ['./test/tcp/*.js']
       }
     },
     uglify: {
@@ -104,9 +85,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('dev', ['browserify', 'watch']);
-  grunt.registerTask('test', ['shell:eslint', 'mochaTest:test', 'karma:test']);
-  grunt.registerTask('test-examples', ['mochaTest:examples', 'karma:examples']);
-  grunt.registerTask('test-tcp', ['mochaTest:tcp']);
   grunt.registerTask('build', ['shell:ts', 'browserify', 'uglify']);
   grunt.registerTask('build_and_watch', ['watch']);
   grunt.registerTask('doc', ['clean', 'jsdoc']);

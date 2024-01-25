@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import ROSLIB from '../..';
+import * as ROSLIB from '../../src/RosLib.js';
 
 var expectedTopics = [
     // '/turtle1/cmd_vel', '/turtle1/color_sensor', '/turtle1/pose',
