@@ -1,4 +1,4 @@
-import { expect } from chai;
+import { expect } from 'chai';
 import ROSLIB from '..';
 
 var DOMParser = require('@xmldom/xmldom').DOMParser;

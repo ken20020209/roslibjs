@@ -1,4 +1,4 @@
-import { expect } from chai;
+import { expect } from 'chai';
 import ROSLIB from '../..';
 
 describe('TF2 Republisher Example', function() {

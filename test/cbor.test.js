@@ -1,4 +1,4 @@
-import { expect } from chai;
+import { expect } from 'chai';
 import CBOR from 'cbor-js';
 import cborTypedArrayTagger from '../src/util/cborTypedArrayTags.js';
 

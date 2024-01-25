@@ -1,4 +1,4 @@
-import { expect } from chai;
+import { expect } from 'chai';
 import ROSLIB from '..';
 
 describe('Transform', function() {
