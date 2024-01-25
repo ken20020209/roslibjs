@@ -58,9 +58,9 @@
     "doc": "grunt doc",
     "lint": "eslint .",
     "test": "npm run lint && npm run test-examples && npm run test-tcp && npm run test-misc",
-    "test-examples": "mocha ./test/examples/*.js",
-    "test-tcp": "mocha ./test/tcp/*.js",
-    "test-misc": "mocha ./test/*.test.js",
+    "test-examples": "mocha --exit ./test/examples/*.js",
+    "test-tcp": "mocha --exit ./test/tcp/*.js",
+    "test-misc": "mocha --exit ./test/*.test.js",
     "publish": "npm run build && npm run test"
   },
   "repository": {
