@@ -21,7 +21,10 @@ module.exports = function(grunt) {
     browserify: {
       dist: {
         src: ['./tsbuild/RosLib.js'],
-        dest: './build/roslib.js'
+        dest: './build/roslib.js',
+        options: {
+          plugin: ['esmify']
+        }
       }
     },
     karma: {

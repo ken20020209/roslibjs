@@ -15,6 +15,7 @@
     "@types/mocha": "^10.0.6",
     "chai": "*",
     "eslint": "^8.56.0",
+    "esmify": "^2.1.1",
     "grunt": "^1.0.0",
     "grunt-browserify": "^6.0.0",
     "grunt-cli": "^1.2.0",
