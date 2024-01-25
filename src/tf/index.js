@@ -1,1 +1,1 @@
-export * from './TFClient.js';
+export { default as TFClient } from './TFClient.js';

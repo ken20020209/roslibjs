@@ -16,6 +16,7 @@ import TFClient from '../tf/TFClient.js';
 import ActionClient from '../actionlib/ActionClient.js';
 import SimpleActionServer from '../actionlib/SimpleActionServer.js';
 import { EventEmitter } from 'eventemitter3';
+import { WebSocket } from 'ws';
 
 /**
  * Manages connection to the server and all interactions with ROS.
@@ -73,7 +74,8 @@ export default class Ros extends EventEmitter {
       );
     } else if (this.transportLibrary === 'websocket') {
       if (!this.socket || this.socket.readyState === WebSocket.CLOSED) {
-        var sock = new WebSocket(url);
+        // Detect if in browser vs in NodeJS
+        var sock = typeof window !== 'undefined' ? new window.WebSocket(url) : new WebSocket(url);
         sock.binaryType = 'arraybuffer';
         this.socket = assign(sock, socketAdapter(this));
       }
