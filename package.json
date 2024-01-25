@@ -8,7 +8,6 @@
   "type": "module",
   "browser": {
     "canvas": "./src/util/shim/canvas.js",
-    "ws": "./src/util/shim/WebSocket.js",
     "./src/util/decompressPng.js": "./src/util/shim/decompressPng.js"
   },
   "devDependencies": {

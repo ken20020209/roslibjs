@@ -20,7 +20,8 @@ module.exports = function(grunt) {
         src: ['./tsbuild/RosLib.js'],
         dest: './build/roslib.js',
         options: {
-          plugin: ['esmify']
+          plugin: ['esmify'],
+          ignore: ["ws"]
         }
       }
     },
