@@ -151,15 +151,13 @@ favoriteColor.get(function(value) {
 </script>
 <template>
   <h1>Simple roslib Example</h1>
-  <p>it is ros 1 cmd. you can run ros2 cmd to use</p>
   <p>Run the following commands in the terminal then refresh this page. Check the JavaScript
     console for the output.</p>
   <ol>
-    <li><tt>roscore</tt></li>
-    <li><tt>rostopic pub /listener std_msgs/String "Hello, World"</tt></li>
-    <li><tt>rostopic echo /cmd_vel</tt></li>
-    <li><tt>rosrun rospy_tutorials add_two_ints_server</tt></li>
-    <li><tt>roslaunch rosbridge_server rosbridge_websocket.launch</tt></li>
+    <li><tt>ros2 topic pub /listener std_msgs/msg/String data:\ \'Hello,World\'\ </tt></li>
+    <li><tt>ros2 topic echo /cmd_vel</tt></li>
+    <li><tt>ros2 run examples_rclpy_minimal_service service_member_function</tt></li>
+    <li><tt>ros2 launch rosbridge_server rosbridge_websocket.launch</tt></li>
   </ol>
     <div id="statusIndicator" >
         <p id="connecting" v-if="status==='connecting'">
