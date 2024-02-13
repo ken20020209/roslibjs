@@ -6,14 +6,14 @@
  * in the context of their parent object, unless bound
  * @fileOverview
  */
-'use strict';
+"use strict";
 
-var decompressPng = require('../util/decompressPng');
-var CBOR = require('cbor-js');
-var typedArrayTagger = require('../util/cborTypedArrayTags');
+var decompressPng = require("../util/decompressPng");
+var CBOR = require("cbor-js");
+var typedArrayTagger = require("../util/cborTypedArrayTags");
 var BSON = null;
-if(typeof bson !== 'undefined'){
-    BSON = bson().BSON;
+if (typeof bson !== "undefined") {
+  BSON = bson().BSON;
 }
 
 /**
@@ -31,23 +31,31 @@ function SocketAdapter(client) {
   }
 
   function handleMessage(message) {
-    if (message.op === 'publish') {
+    if (message.op === "publish") {
       client.emit(message.topic, message.msg);
-    } else if (message.op === 'service_response') {
+    } else if (message.op === "service_response") {
       client.emit(message.id, message);
-    } else if (message.op === 'call_service') {
+    } else if (message.op === "call_service") {
       client.emit(message.service, message);
-    } else if(message.op === 'status'){
-      if(message.id){
-        client.emit('status:'+message.id, message);
+    } else if (message.op === "send_action_goal") {
+      client.emit(message.action, message);
+    } else if (message.op === "cancel_action_goal") {
+      client.emit(message.id, message);
+    } else if (message.op === "action_feedback") {
+      client.emit(message.id, message);
+    } else if (message.op === "action_result") {
+      client.emit(message.id, message);
+    } else if (message.op === "status") {
+      if (message.id) {
+        client.emit("status:" + message.id, message);
       } else {
-        client.emit('status', message);
+        client.emit("status", message);
       }
     }
   }
 
   function handlePng(message, callback) {
-    if (message.op === 'png') {
+    if (message.op === "png") {
       decompressPng(message.data, callback);
     } else {
       callback(message);
@@ -56,10 +64,10 @@ function SocketAdapter(client) {
 
   function decodeBSON(data, callback) {
     if (!BSON) {
-      throw 'Cannot process BSON encoded message without BSON header.';
+      throw "Cannot process BSON encoded message without BSON header.";
     }
     var reader = new FileReader();
-    reader.onload  = function() {
+    reader.onload = function () {
       var uint8Array = new Uint8Array(this.result);
       var msg = BSON.deserialize(uint8Array);
       callback(msg);
@@ -76,7 +84,7 @@ function SocketAdapter(client) {
      */
     onopen: function onOpen(event) {
       client.isConnected = true;
-      client.emit('connection', event);
+      client.emit("connection", event);
     },
 
     /**
@@ -87,7 +95,7 @@ function SocketAdapter(client) {
      */
     onclose: function onClose(event) {
       client.isConnected = false;
-      client.emit('close', event);
+      client.emit("close", event);
     },
 
     /**
@@ -97,7 +105,7 @@ function SocketAdapter(client) {
      * @memberof SocketAdapter
      */
     onerror: function onError(event) {
-      client.emit('error', event);
+      client.emit("error", event);
     },
 
     /**
@@ -112,7 +120,7 @@ function SocketAdapter(client) {
         decoder(data.data, function (message) {
           handleMessage(message);
         });
-      } else if (typeof Blob !== 'undefined' && data.data instanceof Blob) {
+      } else if (typeof Blob !== "undefined" && data.data instanceof Blob) {
         decodeBSON(data.data, function (message) {
           handlePng(message, handleMessage);
         });
@@ -120,10 +128,10 @@ function SocketAdapter(client) {
         var decoded = CBOR.decode(data.data, typedArrayTagger);
         handleMessage(decoded);
       } else {
-        var message = JSON.parse(typeof data === 'string' ? data : data.data);
+        var message = JSON.parse(typeof data === "string" ? data : data.data);
         handlePng(message, handleMessage);
       }
-    }
+    },
   };
 }
 

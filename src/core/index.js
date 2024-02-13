@@ -7,7 +7,8 @@ var core = module.exports = {
     Param: require('./Param'),
     Service: require('./Service'),
     ServiceRequest: require('./ServiceRequest'),
-    ServiceResponse: require('./ServiceResponse')
+    ServiceResponse: require('./ServiceResponse'),
+    Action: require('./Action'),
 };
 
-mixin(core.Ros, ['Param', 'Service', 'Topic'], core);
+mixin(core.Ros, ['Param', 'Service', 'Topic','Action'], core);
